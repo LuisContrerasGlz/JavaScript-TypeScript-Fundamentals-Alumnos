@@ -30,5 +30,17 @@ const y3 = false
 
 console.log(y3 + x3) // "falsehello"
 
+// Ejemplo 4
+
+const x = "hello"
+const y = 2
+
+console.log(x - y) // NaN, "Not a Number"
+
+/*
++ → concatena si hay string
+-, *, / → fuerzan conversión a número
+Si no se puede convertir → NaN
+*/
 
 
