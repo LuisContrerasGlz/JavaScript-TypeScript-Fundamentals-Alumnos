@@ -74,3 +74,9 @@ No puedes cambiar la referencia
 Pero sí modificar el contenido
 
 */
+
+// Ejemplo de const con strings queriendo modificar su valor:
+
+const greeting = "Hello"
+greeting[0] = "h" // esto no cambia la string, sigue siendo "Hello"
+console.log(greeting) // imprime "Hello"
