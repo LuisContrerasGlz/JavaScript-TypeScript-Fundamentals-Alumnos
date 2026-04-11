@@ -16,3 +16,13 @@ function processData(input: any): void {
 processData("Test data");
 processData(123);
 processData({ key: "value" });  
+
+// Alternativa con unknown, unknown es la versión segura de any. Te obliga a comprobar qué es la variable antes de usarla.
+let safeData : unknown = "Hola, soy un dato seguro!";
+// safeData = 123; // Esto es válido, pero no se puede usar directamente sin una verificación de tipo
+
+if (typeof safeData === "string") {
+    console.log(`Safe data is a string: ${safeData}`);
+} else {
+    console.log("Safe data is not a string.");
+}
