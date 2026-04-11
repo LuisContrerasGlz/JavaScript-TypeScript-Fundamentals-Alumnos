@@ -20,3 +20,19 @@ function getUserInfo(): [string, number] {
 
 const [username, userAge] = getUserInfo();
 console.log(`Username: ${username}, User Age: ${userAge}`);
+
+// Tuplas útiles para representar códigos HTTP y sus respuestas
+let httpCodesandResponse: [number, string][] = [
+    [200, "OK"],
+    [201, "Created"],
+    [400, "Bad Request"],
+    [401, "Unauthorized"],
+    [404, "Not Found"],
+    [500, "Internal Server Error"],
+    [503, "Service Unavailable"]
+];
+
+console.log("\nHTTP Status Codes and Responses:");
+httpCodesandResponse.forEach(function([httpCode, response]) {
+    console.log(`HTTP Response: ${httpCode} - "${response}"`);
+});
