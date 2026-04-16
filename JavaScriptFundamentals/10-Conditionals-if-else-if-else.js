@@ -51,3 +51,13 @@ if (false) {
 }
 
 console.log("") // esta línea SIEMPRE se ejecuta
+
+// Ternary Operator
+
+let isNightTime = true;
+let greeting = isNightTime ? 'Good evening!' : 'Good day!';
+console.log(greeting); // Output: Good evening!
+
+isNightTime = false;
+greeting = isNightTime ? 'Good evening!' : 'Good day!';
+console.log(greeting); // Output: Good day!
