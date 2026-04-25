@@ -28,3 +28,17 @@ export function loginTernary(username: string, password: string): boolean {
 const loginDemo1 = login("admin", "Test1234!");
 const loginDemo2 = login("guest", "wrong");
 console.log(`Result 1: ${loginDemo1}, Result 2: ${loginDemo2}`);
+
+// Parámetros con valor por defecto
+
+export function navigateTo(
+  path: string,
+  baseUrl: string = "https://qa.myapp.com"
+): string {
+  const fullUrl = `${baseUrl}${path}`;
+  console.log(`Navigating to: ${fullUrl}`);
+  return fullUrl;
+}
+ 
+navigateTo("/login");                                  // URL por defecto (QA)
+navigateTo("/login", "https://staging.myapp.com");     // URL personalizada
