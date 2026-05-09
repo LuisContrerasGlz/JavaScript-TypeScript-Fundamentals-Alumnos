@@ -87,3 +87,13 @@ TEMPLATE LITERAL:
 `Hello ${name}`
 
 */
+
+const saludo = `hey ${name} ${5+2}`;
+
+console.log(saludo);
+
+/* NOTAS:
+- puedes usar cualquier expresión dentro de ${}
+- el resultado se evalúa e inserta en el string
+- hace que el código sea más dinámico y fácil de leer
+*/
