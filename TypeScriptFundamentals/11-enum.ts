@@ -13,6 +13,7 @@ enum BugStatus {
   CLOSED = "CLOSED",
 }
 
+// Para ser espefificos, podemos usar esta forma
 let currentEnv: Environment = Environment.QA;
 let bugState: BugStatus = BugStatus.NEW;
 
@@ -25,6 +26,11 @@ console.log(`Bug status: ${bugState}`);
 
 // Enum numérico por defecto
 // Comienza en 0 y se autoincrementa.
+
+
+// normalmente se sa asi porque TypeScript normalmente puede inferir el tipo automáticamente.
+
+const currentEnv2 = Environment.PROD; // Type: Environment.PROD
 
 enum StatusCode {
   SUCCESS,       // 0
@@ -50,3 +56,59 @@ enum Priority {
 let textCode: string = StatusCode[0];
 
 console.log(textCode); // SUCCESS
+
+// ------------------ Enum en test automation ------------------
+
+enum TestStatus {
+  PASSED = "PASSED",
+  FAILED = "FAILED",
+  SKIPPED = "SKIPPED",
+}
+
+function logTestResult(testName: string, status: TestStatus): void {
+  console.log(`Test "${testName}" has ${status}`);
+}
+
+logTestResult("Login Test", TestStatus.PASSED);
+logTestResult("Signup Test", TestStatus.FAILED);
+logTestResult("Profile Update Test", TestStatus.SKIPPED);
+
+/*
+
+Donde más valor tienen es cuando tienes:
+
+valores repetitivos
+estados fijos
+ambientes
+roles
+tipos de usuario
+endpoints
+status
+browsers
+flags/configuración
+
+*/
+
+enum UserRole {
+  ADMIN = "admin",
+  AGENT = "agent",
+  CUSTOMER = "customer",
+}
+
+enum BrowserType {
+  CHROME = "chromium",
+  FIREFOX = "firefox",
+  WEBKIT = "webkit",
+}
+
+enum ApiStatus {
+  SUCCESS = 200,
+  NOT_FOUND = 404,
+  SERVER_ERROR = 500,
+}
+
+enum ClaimStatus {
+  OPEN = "OPEN",
+  PENDING = "PENDING",
+  CLOSED = "CLOSED",
+}
