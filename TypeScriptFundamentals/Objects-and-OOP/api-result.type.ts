@@ -1,0 +1,1 @@
+export type ApiResult = string | number | boolean;
